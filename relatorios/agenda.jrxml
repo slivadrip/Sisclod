@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="agenda" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3a37120f-cb81-4708-83dc-a02c1b00ca82">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT tbagenda2.idAgenda, tbpaciente.noPaciente, tbagenda2.dsData, tbagenda2.dsHora, tbpaciente.nrCelular                FROM tbagenda2 INNER JOIN tbpaciente  on tbagenda2.idPaciente = tbpaciente.idPaciente ORDER BY idAgenda]]>
+	</queryString>
+	<field name="idAgenda" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="noPaciente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dsData" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dsHora" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nrCelular" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="180" height="79" uuid="7e72fe89-862c-49f2-bc8a-38e7a71df60a"/>
+				<imageExpression><![CDATA["C:\\Users\\Dih\\Desktop\\sicldo\\logo100.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="199" y="18" width="319" height="61" uuid="0e2ad53a-e296-4b15-9914-b31d13d2f872"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO AGENDA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="41" width="52" height="20" uuid="8bcd2c4c-e52b-441f-9d37-aee75ce9e219"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="41" width="100" height="20" uuid="958e7d6b-1f59-4d87-9740-e0bd5dd6da6d"/>
+				<text><![CDATA[PACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="41" width="100" height="20" uuid="f0bc1986-e46f-475d-a202-fb847cd7a34f"/>
+				<text><![CDATA[DATA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="41" width="100" height="20" uuid="754dfc40-6939-4dd3-ab31-d95372ae1e8a"/>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="41" width="100" height="20" uuid="1952d816-25c5-4365-a86f-651a597e4933"/>
+				<text><![CDATA[CONTATO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="9" y="13" width="43" height="20" uuid="3f18c49c-798a-4443-be2b-59939b17a34c"/>
+				<textFieldExpression><![CDATA[$F{idAgenda}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="13" width="100" height="20" uuid="358404d4-a8ba-4e61-b161-e24c2b4d841f"/>
+				<textFieldExpression><![CDATA[$F{noPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="215" y="13" width="100" height="20" uuid="a138269c-2a15-4582-8143-566e92dcb0b0"/>
+				<textFieldExpression><![CDATA[$F{dsData}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="13" width="100" height="20" uuid="fe58725d-88e7-4c2e-8a9f-074f0d6025c6"/>
+				<textFieldExpression><![CDATA[$F{dsHora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="13" width="100" height="20" uuid="08593495-d8ba-431d-ac02-4d5c6d364ab4"/>
+				<textFieldExpression><![CDATA[$F{nrCelular}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
